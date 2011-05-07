@@ -1,6 +1,6 @@
 %define name yelp-xsl
 %define version 2.31.6
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: GNOME XML documentation utilities
 Name: %{name}
