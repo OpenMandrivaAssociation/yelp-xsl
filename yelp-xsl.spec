@@ -1,20 +1,17 @@
-%define name yelp-xsl
-%define version 2.31.6
-%define release %mkrel 2
-
 Summary: GNOME XML documentation utilities
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
+Name: yelp-xsl
+Version: 3.2.1
+Release: 1
 License: LGPLv2+ and GPLv2+
 Group: Publishing
 Url: http://www.gnome.org/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.xz
+
 BuildArch: noarch
-BuildRequires: 		libxslt-devel
-BuildRequires: 		libxslt-proc
 BuildRequires: 		intltool
+BuildRequires: 		itstool
+BuildRequires: 		xsltproc
+BuildRequires: 		pkgconfig(libxslt)
 
 %description
 yelp-xsl is a collection of documentation utilities for the Gnome
@@ -31,15 +28,10 @@ XSLT stylesheets that were once distributed with Yelp.
 %make
 
 %install
-rm -rf %{buildroot} %name.lang
+rm -rf %{buildroot} %{name}.lang
 %makeinstall_std
-%find_lang %name
 
-%clean
-rm -rf %{buildroot}
-
-%files -f %name.lang
-%defattr(-,root,root)
+%files
 %doc AUTHORS README
-%_datadir/%name
-%_datadir/pkgconfig/%name.pc
+%{_datadir}/%{name}
+%{_datadir}/pkgconfig/%{name}.pc
