@@ -19,6 +19,13 @@ project.  Notably, it contains utilities for building documentation and
 all auxiliary files in your source tree, and it contains the DocBook
 XSLT stylesheets that were once distributed with Yelp.
 
+%package devel
+Summary: The pkgconfig for %{name}
+Group: Development/GNOME and GTK+
+Requires: %{name} = %{version}
+
+%description devel
+The pkgconfig for %{name}.
 
 %prep
 %setup -q
@@ -34,4 +41,6 @@ rm -rf %{buildroot} %{name}.lang
 %files
 %doc AUTHORS README
 %{_datadir}/%{name}
+
+%files devel
 %{_datadir}/pkgconfig/%{name}.pc
