@@ -1,6 +1,6 @@
 Summary: GNOME XML documentation utilities
 Name: yelp-xsl
-Version: 3.2.1
+Version: 3.4.1
 Release: 1
 License: LGPLv2+ and GPLv2+
 Group: Publishing
@@ -35,7 +35,6 @@ The pkgconfig for %{name}.
 %make
 
 %install
-rm -rf %{buildroot} %{name}.lang
 %makeinstall_std
 
 %files
@@ -44,3 +43,4 @@ rm -rf %{buildroot} %{name}.lang
 
 %files devel
 %{_datadir}/pkgconfig/%{name}.pc
+
