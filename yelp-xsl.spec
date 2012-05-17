@@ -8,10 +8,10 @@ Url: http://www.gnome.org/
 Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.xz
 
 BuildArch: noarch
-BuildRequires: 		intltool
-BuildRequires: 		itstool
-BuildRequires: 		xsltproc
-BuildRequires: 		pkgconfig(libxslt)
+BuildRequires:	intltool
+BuildRequires:	itstool
+BuildRequires: 	xsltproc
+BuildRequires: 	pkgconfig(libxslt)
 
 %description
 yelp-xsl is a collection of documentation utilities for the Gnome
