@@ -1,13 +1,15 @@
-Summary: GNOME XML documentation utilities
-Name: yelp-xsl
-Version: 3.4.2
-Release: 1
-License: LGPLv2+ and GPLv2+
-Group: Publishing
-Url: http://www.gnome.org/
-Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.xz
+%define url_ver %(echo %{version}|cut -d. -f1,2)
 
+Summary:	GNOME XML documentation utilities
+Name:		yelp-xsl
+Version:	3.6.1
+Release:	1
+License:	LGPLv2+ and GPLv2+
+Group:		Publishing
+Url:		http://www.gnome.org/
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp-xsl/%{url_ver}/%{name}-%{version}.tar.xz
 BuildArch: noarch
+
 BuildRequires:	intltool
 BuildRequires:	itstool
 BuildRequires: 	xsltproc
@@ -20,9 +22,9 @@ all auxiliary files in your source tree, and it contains the DocBook
 XSLT stylesheets that were once distributed with Yelp.
 
 %package devel
-Summary: The pkgconfig for %{name}
-Group: Development/GNOME and GTK+
-Requires: %{name} = %{version}
+Summary:	The pkgconfig for %{name}
+Group:		Development/GNOME and GTK+
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 The pkgconfig for %{name}.
