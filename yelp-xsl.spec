@@ -2,8 +2,8 @@
 
 Summary:	GNOME XML documentation utilities
 Name:		yelp-xsl
-Version:	3.18.1
-Release:	2
+Version:	3.28.0
+Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		Publishing
 Url:		http://www.gnome.org/
