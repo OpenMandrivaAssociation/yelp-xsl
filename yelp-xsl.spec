@@ -2,14 +2,15 @@
 
 Summary:	GNOME XML documentation utilities
 Name:		yelp-xsl
-Version:	3.30.1
-Release:	2
+Version:	3.32.1
+Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		Publishing
 Url:		http://www.gnome.org/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp-xsl/%{url_ver}/%{name}-%{version}.tar.xz
 BuildArch: noarch
 
+BuildRequires:	python2-libxml2
 BuildRequires:	intltool
 BuildRequires:	itstool
 BuildRequires: 	xsltproc
@@ -34,10 +35,10 @@ The pkgconfig for %{name}.
 
 %build
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc AUTHORS README
