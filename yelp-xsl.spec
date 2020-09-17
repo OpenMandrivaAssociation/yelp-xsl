@@ -10,7 +10,7 @@ Url:		http://www.gnome.org/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp-xsl/%{url_ver}/%{name}-%{version}.tar.xz
 BuildArch: noarch
 
-BuildRequires:	python2-libxml2
+BuildRequires:	python-libxml2
 BuildRequires:	intltool
 BuildRequires:	itstool
 BuildRequires: 	xsltproc
