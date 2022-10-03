@@ -41,7 +41,7 @@ The pkgconfig for %{name}.
 %make_install
 
 %files
-%doc AUTHORS README
+%doc AUTHORS README*
 %{_datadir}/%{name}
 
 %files devel
