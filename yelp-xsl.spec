@@ -3,11 +3,11 @@
 Summary:	GNOME XML documentation utilities
 Name:		yelp-xsl
 Version:	42.1
-Release:	4
+Release:	5
 License:	LGPLv2+ and GPLv2+
 Group:		Publishing
-Url:		http://www.gnome.org/
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp-xsl/%{url_ver}/%{name}-%{version}.tar.xz
+Url:		https://www.gnome.org/
+Source0:	https://ftp.gnome.org/pub/GNOME/sources/yelp-xsl/%{url_ver}/%{name}-%{version}.tar.xz
 BuildArch: noarch
 
 BuildRequires:	python-libxml2
