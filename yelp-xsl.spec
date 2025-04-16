@@ -3,7 +3,7 @@
 Summary:	GNOME XML documentation utilities
 Name:		yelp-xsl
 Version:	42.1
-Release:	7
+Release:	8
 License:	LGPLv2+ and GPLv2+
 Group:		Publishing
 Url:		https://www.gnome.org/
@@ -15,6 +15,11 @@ BuildRequires:	intltool
 BuildRequires:	itstool
 BuildRequires: 	xsltproc
 BuildRequires: 	pkgconfig(libxslt)
+
+%patchlist
+# https://www.phoronix.com/news/GNOME-Yelp-Security-Issue-2025
+# https://gitlab.gnome.org/GNOME/yelp/-/issues/221
+https://gitlab.gnome.org/-/project/1541/uploads/c96d62a9df3b77056e254f861c52bf5c/yelp-xsl.patch
 
 %description
 yelp-xsl is a collection of documentation utilities for the Gnome
@@ -31,7 +36,7 @@ Requires:	%{name} = %{version}-%{release}
 The pkgconfig for %{name}.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure
