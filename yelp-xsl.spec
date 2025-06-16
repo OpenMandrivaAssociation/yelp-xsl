@@ -10,6 +10,7 @@ Url:		https://www.gnome.org/
 Source0:	https://ftp.gnome.org/pub/GNOME/sources/yelp-xsl/%{url_ver}/%{name}-%{version}.tar.xz
 BuildArch: noarch
 
+BuildRequires:  meson
 BuildRequires:	python-libxml2
 BuildRequires:	intltool
 BuildRequires:	itstool
@@ -39,11 +40,11 @@ The pkgconfig for %{name}.
 %autosetup -p1
 
 %build
-%configure
-%make_build
+%meson
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %files
 %doc AUTHORS README*
