@@ -12,6 +12,7 @@ BuildArch: noarch
 
 BuildRequires:  meson
 BuildRequires:	python-libxml2
+BuildRequires:  libxml2-utils
 BuildRequires:	intltool
 BuildRequires:	itstool
 BuildRequires: 	xsltproc
