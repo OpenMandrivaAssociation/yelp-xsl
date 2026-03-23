@@ -3,7 +3,7 @@
 Summary:	GNOME XML documentation utilities
 Name:		yelp-xsl
 Version:	49.0
-Release:	1
+Release:	2
 License:	LGPLv2+ and GPLv2+
 Group:		Publishing
 Url:		https://www.gnome.org/
@@ -11,8 +11,8 @@ Source0:	https://ftp.gnome.org/pub/GNOME/sources/yelp-xsl/%{url_ver}/%{name}-%{v
 BuildArch: noarch
 
 BuildRequires:  meson
-BuildRequires:	python-libxml2
-BuildRequires:  libxml2-utils
+BuildRequires:	python-libxml2 >= 2.15.2
+BuildRequires:  libxml2-utils >= 2.15.2
 BuildRequires:	intltool
 BuildRequires:	itstool
 BuildRequires: 	xsltproc
